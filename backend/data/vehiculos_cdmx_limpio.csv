@@ -1,0 +1,301 @@
+﻿marca,modelo,tipo_vehiculo,año,precio,tipo_carroceria,combustible,transmision,cilindros,rendimiento_ciudad_kmL,capacidad_pasajeros,cajuela_litros,segmento,holograma,largo_m,ancho_m,altura_cm,costo_mantenimiento_anual,disponibilidad_refacciones,kilometraje_km,altura_libre_suelo_cm,tipo_aspiracion,estrellas_seguridad,conectividad,emisiones_CO2_gkm
+Chevrolet,Cavalier,seminuevo,2021,187999,sedan,gasolina,manual,4,14.8,5,480,sedán_económico,0,4.63,1.78,151,4000,alta,60000,16,Turbo,4,No,145.6
+Renault,Kwid,seminuevo,2023,189999,hatchback,gasolina,manual,3,14.5,5,280,compacto_urbano,0,3.73,1.56,160,3800,alta,45000,14,Natural,4,Sí,121.0
+Honda,City,seminuevo,2021,196999,sedan,gasolina,automática,4,15.8,5,506,sedán_económico,0,4.44,1.69,149,4100,alta,68000,15,Natural,5,Sí,131.0
+Chevrolet,Onix,seminuevo,2023,200500,hatchback,gasolina,manual,4,14.8,5,300,compacto_urbano,0,3.82,1.72,155,3600,alta,38000,15,Turbo,4,Sí,128.9
+Volkswagen,Vento,seminuevo,2022,205999,sedan,gasolina,manual,4,15.5,5,480,sedán_económico,0,4.56,1.78,151,4400,alta,62000,15,Turbo,4,No,149.5
+Hyundai,Grand i10,seminuevo,2022,209999,hatchback,gasolina,manual,4,15.2,5,311,compacto_urbano,0,3.77,1.66,161,3500,alta,52000,15,Natural,5,No,147.1
+Nissan,Versa,seminuevo,2022,225999,sedan,gasolina,manual,4,16.5,5,506,sedán_económico,0,4.63,1.73,152,4200,alta,55000,16,Turbo,5,No,155.7
+Suzuki,Ertiga,seminuevo,2021,236999,minivan,gasolina,automática,4,14.5,7,550,familiar_7plazas,0,4.41,1.76,163,3800,media,68000,16,Turbo,3,Sí,164.3
+Renault,Kwid,nuevo,2025,264029,hatchback,gasolina,manual,3,14.5,5,280,compacto_urbano,00,3.73,1.56,160,3500,alta,0,15,Natural,5,Sí,136.9
+Peugeot,2008,seminuevo,2021,268999,suv,gasolina,automática,4,15.2,5,405,suv_compacto,0,4.25,1.84,157,4300,media,70000,19,Turbo,4,No,161.5
+Nissan,Kicks,seminuevo,2022,269999,suv,gasolina,automática,4,16.5,5,410,suv_compacto,0,4.3,1.79,170,4000,alta,50000,19,Natural,4,Sí,170.9
+Audi,Q3,seminuevo,2019,271999,suv,gasolina,automática,4,13.2,5,589,suv_premium,0,4.48,1.85,159,8500,media,125000,22,Natural,4,No,185.3
+Hyundai,Grand i10,nuevo,2025,275900,hatchback,gasolina,manual,4,15.2,5,311,compacto_urbano,00,3.77,1.66,161,3200,alta,0,16,Turbo,5,Sí,121.1
+Kia,Sportage,seminuevo,2020,286999,suv,gasolina,automática,4,14.2,5,602,suv_mediano,0,4.6,1.86,170,5000,media,95000,19,Natural,4,No,169.9
+Mitsubishi,Xpander,seminuevo,2022,292500,minivan,gasolina,automática,4,13.8,7,700,familiar_7plazas,0,4.48,1.81,167,4200,media,52000,15,Turbo,4,Sí,192.5
+MG,MG5,nuevo,2025,299900,sedan,gasolina,manual,4,16.8,5,500,compacto_urbano,00,4.53,1.78,152,2800,media,0,14,Turbo,4,Sí,141.8
+Mazda,CX-5,seminuevo,2019,299999,suv,gasolina,automática,4,14.8,5,580,suv_mediano,0,4.57,1.84,169,5200,media,105000,22,Natural,4,No,171.0
+Toyota,Prius,seminuevo,2022,299999,sedan,híbrido,automática,4,25.0,5,420,sedán_eficiente,Exento,4.6,1.78,146,3200,alta,48000,13,Eléctrico,4,Sí,93.6
+Chevrolet,Cavalier,nuevo,2025,305500,sedan,gasolina,manual,4,14.8,5,480,sedán_económico,00,4.63,1.78,151,3800,alta,0,16,Natural,5,No,152.4
+Hyundai,Creta,seminuevo,2021,311999,suv,gasolina,automática,4,14.9,5,429,suv_compacto,0,4.27,1.82,168,4200,media,65000,22,Natural,3,No,160.3
+Kia,Seltos,seminuevo,2021,311999,suv,gasolina,automática,4,15.2,5,405,suv_compacto,0,4.38,1.83,165,4400,media,58000,18,Natural,5,No,200.3
+Skoda,Octavia,seminuevo,2020,318999,sedan,gasolina,automática,4,15.8,5,600,sedán_familiar,0,4.69,1.82,147,4500,media,85000,15,Turbo,4,Sí,147.9
+Nissan,Versa,nuevo,2025,324900,sedan,gasolina,manual,4,16.5,5,506,sedán_económico,00,4.63,1.73,152,4000,alta,0,13,Turbo,4,Sí,133.6
+Toyota,Corolla,seminuevo,2021,328500,sedan,gasolina,automática,4,16.2,5,450,sedán_familiar,0,4.63,1.8,145,4700,alta,75000,15,Natural,4,No,126.2
+Mercedes-Benz,GLA,seminuevo,2019,333999,suv,gasolina,automática,4,13.5,5,421,suv_premium,0,4.43,1.81,156,7500,media,118000,18,Natural,4,No,207.9
+Seat,Ibiza,nuevo,2025,342900,hatchback,gasolina,manual,4,16.5,5,355,compacto_urbano,00,4.09,1.75,148,3400,media,0,15,Natural,3,Sí,133.5
+Mazda,CX-30,seminuevo,2022,345000,suv,gasolina,automática,4,14.8,5,430,suv_compacto,0,4.4,1.83,160,5000,media,42000,22,Turbo,5,Sí,164.6
+Honda,Civic Hybrid,seminuevo,2020,349999,sedan,híbrido,automática,4,21.8,5,450,sedán_eficiente,Exento,4.65,1.8,145,3700,alta,85000,16,Eléctrico,5,Sí,73.9
+Volkswagen,Vento,nuevo,2025,355900,sedan,gasolina,manual,4,15.5,5,480,sedán_económico,00,4.56,1.78,151,4200,alta,0,15,Natural,4,Sí,153.9
+Suzuki,Ertiga,nuevo,2025,356900,minivan,gasolina,automática,4,14.5,7,550,familiar_7plazas,00,4.41,1.76,163,3600,media,0,17,Natural,4,No,190.2
+Jeep,Renegade,seminuevo,2021,356999,suv,gasolina,automática,4,13.8,5,351,suv_compacto,0,4.26,1.81,165,5200,media,60000,19,Turbo,4,Sí,200.4
+Toyota,Corolla Hybrid,seminuevo,2021,359999,sedan,híbrido,automática,4,22.5,5,430,sedán_eficiente,Exento,4.63,1.8,145,3600,alta,70000,14,Eléctrico,4,No,99.2
+Citroën,C4,nuevo,2025,365500,sedan,gasolina,automática,4,15.8,5,470,sedán_económico,00,4.6,1.82,151,3900,media,0,13,Turbo,4,Sí,141.4
+Nissan,Kicks,nuevo,2025,369900,suv,gasolina,automática,4,16.5,5,410,suv_compacto,00,4.3,1.79,170,3800,alta,0,20,Turbo,4,Sí,208.7
+Peugeot,2008,nuevo,2025,375000,suv,gasolina,automática,4,15.2,5,405,suv_compacto,00,4.25,1.84,157,4100,media,0,22,Turbo,5,No,178.9
+Toyota,Corolla Cross,seminuevo,2021,375800,suv,gasolina,automática,4,15.5,5,430,suv_compacto,0,4.4,1.83,162,4800,alta,72000,18,Turbo,5,No,187.6
+Hyundai,Tucson,seminuevo,2021,376999,suv,gasolina,automática,4,14.5,5,620,suv_mediano,0,4.67,1.86,167,4800,media,80000,19,Natural,3,No,201.5
+Nissan,Qashqai,seminuevo,2020,389999,suv,gasolina,automática,4,13.8,5,610,suv_mediano,0,4.64,1.86,168,5100,alta,92000,20,Turbo,5,Sí,190.9
+Ford,Ranger,seminuevo,2021,389999,pickup,gasolina,automática,6,10.5,2,1700,pickup,0,5.36,1.86,180,6800,alta,75000,23,Natural,4,No,214.5
+Honda,Accord,seminuevo,2020,389999,sedan,gasolina,automática,4,15.8,5,530,sedán_familiar,0,4.88,1.86,147,5200,alta,80000,16,Natural,4,No,143.1
+Hyundai,Creta,nuevo,2025,395500,suv,gasolina,automática,4,14.9,5,429,suv_compacto,00,4.27,1.82,168,4000,media,0,20,Turbo,4,Sí,195.2
+BYD,Qin DM-i,nuevo,2025,398900,sedan,híbrido,automática,4,19.5,5,510,sedán_eficiente,Exento,4.63,1.82,150,3000,media,0,15,Eléctrico,5,Sí,71.8
+Chevrolet,Colorado,seminuevo,2020,399999,pickup,gasolina,automática,6,10.2,2,1800,pickup,0,5.27,1.86,179,7000,alta,88000,25,Turbo,3,No,189.1
+Honda,CR-V,seminuevo,2020,399999,suv,gasolina,automática,4,14.2,5,621,suv_mediano,0,4.6,1.89,170,5600,alta,90000,22,Turbo,4,No,174.5
+Ford,Territory,seminuevo,2023,403999,suv,gasolina,automática,4,13.5,5,570,suv_compacto,0,4.52,1.86,168,5000,alta,25000,19,Turbo,5,Sí,164.0
+Kia,Seltos,nuevo,2025,425900,suv,gasolina,automática,4,15.2,5,405,suv_compacto,00,4.38,1.83,165,4200,media,0,22,Turbo,4,Sí,171.6
+Skoda,Octavia,nuevo,2025,428500,sedan,gasolina,automática,4,15.8,5,600,sedán_familiar,00,4.69,1.82,147,4300,media,0,15,Turbo,4,No,124.0
+Toyota,Corolla,nuevo,2025,428500,sedan,gasolina,automática,4,16.2,5,450,sedán_familiar,00,4.63,1.8,145,4500,alta,0,15,Turbo,4,No,131.1
+Toyota,RAV4,seminuevo,2021,429999,suv,gasolina,automática,4,14.5,5,580,suv_mediano,0,4.63,1.86,169,5400,alta,78000,21,Natural,5,No,191.8
+Hyundai,Starex,nuevo,2025,435800,minivan,gasolina,automática,4,12.8,7,750,familiar_7plazas,00,5.1,1.99,190,4500,media,0,16,Natural,4,Sí,178.2
+Mazda,CX-30,nuevo,2025,445000,suv,gasolina,automática,4,14.8,5,430,suv_compacto,00,4.4,1.83,160,4800,media,0,18,Turbo,5,No,178.5
+Jeep,Renegade,nuevo,2025,456900,suv,gasolina,automática,4,13.8,5,351,suv_compacto,00,4.26,1.81,165,5000,media,0,20,Turbo,4,Sí,170.5
+Acura,RDX,seminuevo,2020,461999,suv,gasolina,automática,4,13.2,5,564,suv_premium,0,4.67,1.89,168,6500,media,88000,19,Natural,3,No,173.3
+Toyota,Corolla Cross,nuevo,2025,475800,suv,gasolina,automática,4,15.5,5,430,suv_compacto,00,4.4,1.83,162,4600,alta,0,19,Turbo,4,No,206.8
+Hyundai,Tucson,nuevo,2025,485900,suv,gasolina,automática,4,14.5,5,620,suv_mediano,00,4.67,1.86,167,4600,media,0,21,Turbo,3,Sí,192.4
+Volkswagen,Jetta GLI,nuevo,2025,489500,sedan,gasolina,automática,4,13.5,5,405,deportivo,00,4.71,1.86,149,6000,alta,0,15,Natural,4,Sí,144.4
+Ford,Ranger,nuevo,2025,489900,pickup,gasolina,automática,6,10.5,2,1700,pickup,00,5.36,1.86,180,6500,alta,0,22,Natural,5,No,186.8
+Toyota,Corolla Hybrid,nuevo,2025,489900,sedan,híbrido,automática,4,22.5,5,430,sedán_eficiente,Exento,4.63,1.8,145,3500,alta,0,14,Eléctrico,5,Sí,99.2
+Honda,Civic Hybrid,nuevo,2025,498500,sedan,híbrido,automática,4,21.8,5,450,sedán_eficiente,Exento,4.65,1.8,145,3600,alta,0,15,Eléctrico,4,Sí,76.5
+Kia,Sportage,nuevo,2025,498900,suv,gasolina,automática,4,14.2,5,602,suv_mediano,00,4.6,1.86,170,4800,media,0,21,Turbo,4,No,179.0
+Toyota,RAV4 Hybrid,seminuevo,2022,498999,suv,híbrido,automática,4,18.5,5,550,suv_eficiente,Exento,4.63,1.86,169,4200,alta,55000,21,Eléctrico,5,Sí,109.6
+Honda,Accord,nuevo,2025,512000,sedan,gasolina,automática,4,15.8,5,530,sedán_familiar,00,4.88,1.86,147,5000,alta,0,16,Turbo,5,Sí,145.6
+Nissan,Qashqai,nuevo,2025,512500,suv,gasolina,automática,4,13.8,5,610,suv_mediano,00,4.64,1.86,168,4900,alta,0,20,Natural,3,Sí,187.8
+Chevrolet,Colorado,nuevo,2025,512500,pickup,gasolina,automática,6,10.2,2,1800,pickup,00,5.27,1.86,179,6800,alta,0,22,Natural,5,No,207.4
+Mazda,CX-5,nuevo,2025,512500,suv,gasolina,automática,4,14.8,5,580,suv_mediano,00,4.57,1.84,169,5000,media,0,21,Natural,4,Sí,202.1
+Honda,CR-V Hybrid,seminuevo,2021,515000,suv,híbrido,automática,4,17.8,5,600,suv_eficiente,Exento,4.6,1.89,170,4400,alta,72000,22,Turbo,3,Sí,101.0
+Toyota,RAV4,nuevo,2025,529900,suv,gasolina,automática,4,14.5,5,580,suv_mediano,00,4.63,1.86,169,5200,alta,0,18,Turbo,4,Sí,171.5
+Honda,CR-V,nuevo,2025,545000,suv,gasolina,automática,4,14.2,5,621,suv_mediano,00,4.6,1.89,170,5400,alta,0,19,Turbo,4,Sí,161.6
+Volvo,XC40,seminuevo,2021,563999,suv,híbrido,automática,4,14.5,5,460,suv_premium,Exento,4.43,1.86,165,7000,media,75000,22,Turbo,4,No,82.6
+BMW,X3,seminuevo,2020,589999,suv,gasolina,automática,4,12.5,5,645,suv_premium,0,4.71,1.89,167,9000,media,95000,18,Natural,5,No,173.4
+Toyota,RAV4 Hybrid,nuevo,2025,598900,suv,híbrido,automática,4,18.5,5,550,suv_eficiente,Exento,4.63,1.86,169,4000,alta,0,20,Turbo,4,Sí,78.4
+Honda,CR-V Hybrid,nuevo,2025,615000,suv,híbrido,automática,4,17.8,5,600,suv_eficiente,Exento,4.6,1.89,170,4200,alta,0,19,Turbo,5,Sí,107.7
+Ford,Mustang,nuevo,2025,645900,coupe,gasolina,automática,6,11.8,4,378,deportivo,00,4.78,1.93,146,7500,alta,0,15,Turbo,5,No,155.1
+Audi,Q3,nuevo,2025,689500,suv,gasolina,automática,4,13.2,5,589,suv_premium,00,4.48,1.85,159,8000,media,0,20,Turbo,5,Sí,175.7
+BMW,X3,nuevo,2025,749900,suv,gasolina,automática,4,12.5,5,645,suv_premium,00,4.71,1.89,167,8500,media,0,18,Turbo,3,Sí,192.8
+Kia,Rio,nuevo,2025,593300,suv,gasolina,automática,4,15.4,5,616,suv_mediano,00,4.23,1.79,167,6465,alta,0,19,Turbo,5,No,179.8
+Mitsubishi,Outlander Sport,nuevo,2024,370300,suv,gasolina,automática,6,14.2,7,479,suv_compacto,00,4.39,1.89,163,5556,alta,0,20,Turbo,4,Sí,205.7
+Chrysler,Pacifica,seminuevo,2022,234000,sedan,gasolina,automática,6,16.6,5,492,sedán_familiar,0,4.7,1.82,142,4185,alta,52842,13,Natural,4,No,138.4
+Citroën,C4,seminuevo,2022,323900,suv,gasolina,automática,6,16.2,5,487,suv_compacto,0,4.68,1.81,174,5105,alta,76878,19,Natural,4,No,173.2
+RAM,1500,seminuevo,2021,316400,suv,gasolina,manual,4,16.0,7,473,suv_compacto,0,4.44,1.81,177,5076,media,136484,20,Natural,4,No,172.3
+Chery,Tiggo 2,nuevo,2025,533500,sedan,gasolina,automática,6,14.3,5,574,sedán_familiar,00,4.72,1.76,151,3583,media,0,13,Turbo,5,Sí,142.5
+RAM,700,seminuevo,2020,261300,suv,gasolina,automática,4,12.5,7,656,suv_mediano,0,4.89,1.85,163,5222,alta,100040,19,Turbo,5,Sí,173.1
+Audi,e-tron,seminuevo,2019,271200,sedan,gasolina,automática,4,13.8,5,545,sedán_económico,0,4.36,1.78,143,9181,media,115242,14,Natural,5,No,143.4
+GMC,Terrain,seminuevo,2023,342000,suv,eléctrico,automática,0,6.0,7,624,suv_mediano,Exento,5.01,1.84,167,4262,media,31378,22,Eléctrico,5,Sí,0.0
+Nissan,Sentra,nuevo,2025,541400,sedan,gasolina,automática,3,17.8,5,418,compacto_urbano,00,4.47,1.81,145,3541,alta,0,16,Turbo,4,No,155.9
+Renault,Kwid,seminuevo,2020,234500,pickup,gasolina,automática,6,10.4,2,1844,pickup,0,5.52,1.93,176,7389,alta,92900,21,Natural,5,No,196.0
+Ford,Expedition,seminuevo,2020,153400,suv,gasolina,automática,3,14.3,5,425,suv_compacto,0,4.79,1.86,160,4968,alta,141585,21,Natural,4,Sí,171.0
+BYD,Song Plus,seminuevo,2019,78900,pickup,gasolina,automática,6,10.0,5,1579,pickup,0,5.15,1.88,176,4031,media,101238,24,Natural,5,No,219.9
+BYD,Qin DM-i,seminuevo,2023,237700,sedan,gasolina,automática,4,13.8,5,460,sedán_familiar,0,4.38,1.86,145,3768,media,57474,15,Natural,4,Sí,140.4
+Suzuki,Vitara,seminuevo,2022,190500,hatchback,híbrido,automática,4,20.5,5,268,compacto_urbano,Exento,3.61,1.69,163,3300,alta,97851,16,Eléctrico,4,Sí,73.6
+Suzuki,Vitara,seminuevo,2021,152000,hatchback,gasolina,manual,6,15.0,5,385,compacto_urbano,0,3.61,1.74,154,3550,alta,94664,14,Turbo,5,Sí,121.9
+RAM,700,nuevo,2024,359800,suv,eléctrico,automática,0,5.5,7,658,suv_mediano,Exento,4.64,1.91,161,5734,media,0,18,Turbo,4,Sí,0.0
+BYD,Atto 3,seminuevo,2023,235200,coupe,eléctrico,automática,0,6.4,5,428,sedán_eficiente,Exento,4.35,1.86,144,4209,media,68174,15,Turbo,4,Sí,0.0
+BMW,X2,nuevo,2025,873100,sedan,gasolina,automática,6,14.7,5,426,sedán_familiar,00,4.85,1.86,148,10069,media,0,14,Turbo,4,Sí,124.4
+Peugeot,3008,nuevo,2025,827400,pickup,híbrido,automática,6,24.5,5,1581,pickup,Exento,5.63,1.86,176,7927,alta,0,21,Turbo,4,Sí,95.1
+Mitsubishi,Mirage G4,seminuevo,2019,134000,suv,gasolina,automática,4,16.0,7,579,suv_compacto,0,4.78,1.84,177,4113,alta,141354,22,Natural,3,Sí,199.6
+GMC,Acadia,nuevo,2025,606400,suv,gasolina,manual,4,13.0,5,530,suv_compacto,00,4.24,1.84,176,4807,media,0,18,Turbo,4,Sí,181.1
+Kia,Sportage,seminuevo,2023,521000,suv,híbrido,automática,4,21.2,7,683,suv_mediano,Exento,4.31,1.84,172,4712,media,56612,18,Turbo,4,Sí,72.5
+GMC,Acadia,seminuevo,2023,323700,minivan,gasolina,automática,4,15.9,5,718,familiar_7plazas,0,4.38,1.88,185,3382,alta,45392,16,Natural,4,Sí,179.1
+Chevrolet,Beat,seminuevo,2023,189300,sedan,gasolina,automática,6,16.4,5,583,compacto_urbano,0,4.57,1.76,144,3436,alta,57862,14,Turbo,5,No,159.8
+Toyota,Prius,seminuevo,2021,258600,sedan,híbrido,manual,4,24.4,5,570,compacto_urbano,Exento,4.99,1.8,154,5067,alta,115932,16,Eléctrico,5,No,91.2
+Dodge,Journey,nuevo,2025,470100,suv,híbrido,automática,4,21.9,5,540,suv_compacto,Exento,4.6,1.88,167,5375,media,0,18,Eléctrico,4,Sí,108.8
+Skoda,Scala,nuevo,2025,631800,suv,gasolina,automática,4,13.8,7,612,suv_mediano,00,4.26,1.9,172,4080,media,0,18,Natural,4,No,203.0
+Acura,TLX,seminuevo,2023,675300,suv,gasolina,automática,4,12.6,7,607,suv_mediano,0,4.85,1.9,164,9187,media,55822,22,Turbo,3,Sí,160.6
+GMC,Terrain,nuevo,2025,394100,minivan,gasolina,automática,4,15.4,5,666,familiar_7plazas,00,4.59,1.94,177,4726,alta,0,15,Natural,3,Sí,196.0
+Fiat,Argo,nuevo,2024,309900,sedan,híbrido,automática,3,25.6,5,451,sedán_eficiente,Exento,4.89,1.8,145,4939,alta,0,14,Turbo,5,Sí,97.3
+Citroën,C4,nuevo,2024,363300,sedan,gasolina,automática,3,16.4,5,479,compacto_urbano,00,4.77,1.87,148,3311,alta,0,14,Turbo,5,Sí,141.5
+Kia,Rio,seminuevo,2022,200400,coupe,gasolina,automática,3,16.0,5,487,deportivo,0,4.31,1.76,149,4775,alta,80604,15,Natural,4,Sí,130.7
+JAC,T8,seminuevo,2022,288000,suv,gasolina,automática,3,13.6,7,524,suv_compacto,0,4.88,1.86,172,2558,media,76950,21,Natural,4,Sí,192.0
+Volvo,XC40,nuevo,2024,918100,suv,gasolina,automática,4,16.3,5,523,suv_premium,00,4.85,1.85,167,8950,alta,0,21,Turbo,3,Sí,165.6
+Mitsubishi,Outlander Sport,nuevo,2025,556100,suv,gasolina,manual,4,14.4,7,617,suv_mediano,00,5.1,1.86,171,5109,media,0,19,Turbo,5,Sí,181.7
+Audi,A4,nuevo,2025,818300,coupe,eléctrico,automática,0,5.5,5,589,sedán_eficiente,Exento,4.64,1.82,154,9444,media,0,15,Turbo,4,Sí,0.0
+Peugeot,3008,seminuevo,2019,150800,coupe,gasolina,automática,3,18.4,5,541,deportivo,0,4.5,1.87,152,3420,alta,92406,16,Natural,4,No,138.1
+Volvo,S90,seminuevo,2019,234700,suv,gasolina,automática,3,14.1,5,695,suv_premium,0,4.77,1.79,164,10887,media,106746,18,Turbo,4,No,207.7
+Mitsubishi,Xpander,seminuevo,2022,191900,minivan,gasolina,automática,4,18.5,7,695,familiar_7plazas,0,4.86,1.91,188,3851,alta,65742,15,Natural,4,Sí,203.8
+Honda,Accord,seminuevo,2019,126100,pickup,gasolina,automática,6,11.1,5,1516,pickup,0,5.19,1.94,189,6956,alta,142008,25,Natural,4,Sí,190.5
+Mitsubishi,L200,seminuevo,2020,199400,suv,gasolina,automática,3,13.2,7,691,suv_mediano,0,5.03,1.84,174,5648,media,156995,21,Natural,3,No,185.0
+Chevrolet,Blazer,nuevo,2025,565700,suv,gasolina,automática,3,12.9,5,537,suv_compacto,00,4.72,1.89,165,6125,media,0,19,Turbo,4,No,168.9
+Mazda,CX-50,seminuevo,2022,521000,pickup,gasolina,automática,6,11.3,2,1668,pickup,0,5.33,1.91,187,8253,alta,48606,20,Natural,4,Sí,216.5
+Kia,Carnival,nuevo,2025,478400,coupe,gasolina,manual,4,15.6,5,448,deportivo,00,4.66,1.8,149,3211,alta,0,16,Turbo,4,Sí,154.8
+Dodge,Charger,seminuevo,2023,273300,sedan,gasolina,manual,4,17.0,5,479,sedán_familiar,0,4.69,1.79,143,3464,alta,60240,14,Natural,5,Sí,131.9
+Geely,Azkarra,seminuevo,2021,171200,pickup,gasolina,automática,6,9.9,2,1696,pickup,0,5.15,1.93,179,3065,media,104548,22,Natural,4,No,205.6
+BMW,X5,nuevo,2025,657600,hatchback,gasolina,manual,4,15.2,5,391,compacto_urbano,00,4.13,1.64,155,9856,media,0,17,Turbo,4,Sí,144.4
+Audi,e-tron,nuevo,2025,728400,pickup,gasolina,automática,6,11.8,2,1753,pickup,00,5.77,1.87,193,10562,media,0,20,Turbo,4,Sí,186.1
+MG,MG HS,nuevo,2025,485200,hatchback,gasolina,manual,4,15.2,5,351,compacto_urbano,00,4.05,1.75,162,4454,media,0,14,Turbo,3,Sí,150.5
+Mercedes-Benz,Clase C,nuevo,2025,573700,sedan,gasolina,automática,6,17.0,5,425,sedán_familiar,00,4.61,1.82,142,8328,media,0,15,Natural,4,Sí,141.6
+Suzuki,Ertiga,seminuevo,2022,206300,hatchback,gasolina,automática,3,16.5,5,347,compacto_urbano,0,4.03,1.61,163,3951,alta,90330,17,Natural,5,Sí,151.1
+Chrysler,300,nuevo,2024,381000,coupe,gasolina,automática,4,18.2,5,550,deportivo,00,4.51,1.87,153,4871,alta,0,15,Natural,4,Sí,141.2
+Suzuki,S-Cross,nuevo,2024,635400,suv,gasolina,automática,6,13.7,7,540,suv_compacto,00,4.21,1.9,161,6034,media,0,22,Natural,4,Sí,160.0
+Jeep,Gladiator,nuevo,2025,318500,hatchback,híbrido,automática,6,23.2,5,329,compacto_urbano,Exento,4.15,1.56,156,3369,alta,0,16,Turbo,4,Sí,83.0
+Ford,F-150,seminuevo,2022,266100,coupe,gasolina,automática,4,14.8,5,523,deportivo,0,4.98,1.74,155,3471,alta,91038,15,Natural,5,No,120.8
+Citroën,C3,nuevo,2025,573300,pickup,gasolina,automática,6,10.9,5,1688,pickup,00,5.54,1.94,193,7521,alta,0,25,Turbo,4,Sí,217.2
+Audi,Q3,nuevo,2024,702700,sedan,híbrido,manual,6,20.4,5,504,sedán_eficiente,Exento,4.38,1.69,142,9017,media,0,14,Eléctrico,4,No,105.1
+Citroën,Berlingo,nuevo,2024,485000,hatchback,gasolina,automática,4,16.6,5,321,compacto_urbano,00,3.62,1.64,159,3967,alta,0,14,Turbo,4,Sí,153.3
+Toyota,Tundra,seminuevo,2021,317100,suv,gasolina,manual,3,15.2,5,425,suv_compacto,0,4.91,1.81,164,4840,alta,132640,22,Natural,4,No,175.4
+MG,MG RX5,seminuevo,2019,131500,suv,gasolina,automática,4,13.5,5,456,suv_compacto,0,4.79,1.78,160,4117,media,205770,18,Natural,4,Sí,162.9
+Ford,Bronco Sport,seminuevo,2022,234200,coupe,gasolina,automática,4,15.7,5,492,deportivo,0,4.66,1.7,150,3177,alta,96258,17,Turbo,3,Sí,155.1
+JAC,T8,seminuevo,2022,287900,sedan,gasolina,manual,3,18.0,5,482,compacto_urbano,0,4.4,1.71,151,3280,baja,97155,16,Turbo,5,No,157.9
+Hyundai,Accent,nuevo,2025,468300,coupe,eléctrico,automática,0,6.1,5,458,sedán_eficiente,Exento,4.59,1.85,148,3389,alta,0,17,Turbo,5,Sí,0.0
+Citroën,C4,nuevo,2024,289800,minivan,gasolina,automática,3,14.0,5,740,familiar_7plazas,00,4.96,1.95,182,5402,alta,0,17,Turbo,3,No,164.3
+Fiat,Pulse,nuevo,2025,314900,sedan,gasolina,manual,4,15.3,5,547,compacto_urbano,00,4.45,1.81,145,4434,alta,0,15,Turbo,4,Sí,139.4
+GMC,Sierra,nuevo,2024,611500,suv,gasolina,automática,4,15.3,7,573,suv_compacto,00,4.52,1.81,164,5641,alta,0,18,Turbo,5,Sí,163.5
+Skoda,Kodiaq,seminuevo,2023,515600,suv,gasolina,automática,4,15.4,5,426,suv_compacto,0,4.34,1.89,161,4334,media,59038,21,Turbo,4,No,198.0
+RAM,2500,nuevo,2025,408900,coupe,gasolina,automática,4,14.1,5,573,deportivo,00,4.77,1.78,152,3186,alta,0,17,Turbo,3,Sí,150.6
+Seat,Ateca,seminuevo,2021,283500,hatchback,gasolina,automática,4,14.1,5,377,compacto_urbano,0,4.12,1.59,157,3942,alta,125568,16,Natural,4,No,125.1
+Chevrolet,Blazer,seminuevo,2019,78100,minivan,gasolina,automática,4,15.6,7,731,familiar_7plazas,0,4.88,1.83,177,4330,alta,123786,17,Natural,4,Sí,183.8
+Suzuki,S-Cross,nuevo,2024,413700,pickup,gasolina,automática,4,10.4,5,1881,pickup,00,5.27,1.89,180,8090,alta,0,24,Turbo,4,Sí,202.0
+Fiat,Argo,seminuevo,2021,273600,sedan,gasolina,automática,4,14.4,5,439,sedán_familiar,0,4.83,1.81,144,4900,alta,133888,16,Turbo,5,No,130.6
+Audi,Q7,seminuevo,2020,318900,minivan,gasolina,manual,4,16.7,7,701,familiar_7plazas,0,4.35,1.88,174,8851,media,84320,17,Natural,5,Sí,203.6
+Geely,Okavango,seminuevo,2023,405900,coupe,eléctrico,automática,0,6.1,5,546,sedán_eficiente,Exento,4.76,1.74,149,2808,media,59524,16,Eléctrico,5,Sí,0.0
+Chevrolet,Beat,nuevo,2025,419100,minivan,gasolina,manual,4,16.5,7,645,familiar_7plazas,00,5.13,1.85,189,5448,alta,0,17,Turbo,4,Sí,181.2
+Skoda,Octavia,seminuevo,2021,165200,hatchback,gasolina,automática,4,16.8,5,339,compacto_urbano,0,3.82,1.7,157,5437,alta,71104,17,Turbo,4,Sí,128.5
+BAIC,X25,nuevo,2024,375700,pickup,gasolina,automática,6,9.1,5,1592,pickup,00,5.76,1.89,190,2963,media,0,20,Natural,3,Sí,201.6
+Volvo,XC90,seminuevo,2020,310800,pickup,gasolina,automática,4,9.6,2,1869,pickup,0,5.35,1.9,182,9500,media,148550,24,Natural,4,No,209.2
+Renault,Logan,nuevo,2024,314200,minivan,gasolina,automática,4,16.0,7,797,familiar_7plazas,00,4.45,1.81,184,4024,alta,0,18,Natural,5,Sí,170.1
+BAIC,X25,seminuevo,2021,272100,sedan,gasolina,automática,4,18.0,5,437,sedán_familiar,0,4.36,1.86,155,4311,media,63492,13,Natural,5,No,132.5
+Suzuki,S-Cross,seminuevo,2020,149700,suv,gasolina,automática,4,16.2,7,474,suv_compacto,0,4.32,1.82,175,5921,media,75860,18,Natural,4,Sí,209.8
+BAIC,X35,seminuevo,2020,113300,suv,gasolina,automática,3,12.7,7,634,suv_mediano,0,4.26,1.9,175,3794,baja,169215,19,Natural,4,Sí,192.5
+Fiat,Argo,nuevo,2024,673300,pickup,gasolina,automática,6,11.3,5,1534,pickup,00,5.76,1.92,191,6083,alta,0,23,Turbo,5,No,197.5
+Citroën,C5 Aircross,nuevo,2025,415700,sedan,gasolina,automática,4,14.7,5,568,sedán_familiar,00,4.74,1.83,153,3546,alta,0,15,Turbo,4,Sí,140.7
+Chrysler,300,nuevo,2024,272100,hatchback,gasolina,automática,6,17.4,5,367,compacto_urbano,00,3.63,1.6,151,4292,alta,0,17,Turbo,4,Sí,124.8
+Chevrolet,Beat,seminuevo,2021,260800,suv,gasolina,automática,4,13.0,7,623,suv_mediano,0,5.0,1.88,172,4765,media,125208,22,Natural,3,No,171.2
+GMC,Sierra,seminuevo,2022,304400,hatchback,gasolina,automática,4,14.0,5,333,compacto_urbano,0,4.06,1.62,164,3682,alta,88635,17,Natural,5,Sí,133.5
+GMC,Acadia,nuevo,2024,473800,sedan,gasolina,automática,4,16.1,5,591,compacto_urbano,00,4.41,1.69,155,3142,alta,0,13,Turbo,5,Sí,143.5
+Citroën,Berlingo,nuevo,2024,324200,sedan,gasolina,automática,6,15.7,5,494,sedán_familiar,00,4.56,1.83,151,5168,alta,0,16,Natural,5,Sí,129.2
+Suzuki,Swift,seminuevo,2019,98000,hatchback,gasolina,manual,4,18.1,5,280,compacto_urbano,0,3.78,1.61,159,4169,alta,186570,14,Natural,3,No,128.8
+Peugeot,5008,seminuevo,2020,161000,suv,híbrido,automática,6,18.5,7,553,suv_compacto,Exento,4.97,1.88,180,5480,alta,94880,19,Eléctrico,4,Sí,72.8
+Citroën,C5 Aircross,seminuevo,2023,346100,coupe,gasolina,manual,3,13.8,5,501,deportivo,0,5.0,1.82,150,4677,alta,67676,15,Natural,5,Sí,145.2
+Dodge,Durango,nuevo,2024,286000,coupe,gasolina,automática,4,16.7,5,446,deportivo,00,4.84,1.71,150,3508,alta,0,15,Natural,4,Sí,129.2
+Audi,Q3,seminuevo,2022,540300,coupe,gasolina,automática,4,14.5,5,541,deportivo,0,4.49,1.81,151,7382,alta,61575,15,Natural,5,Sí,156.2
+Chevrolet,Onix,seminuevo,2020,204300,sedan,híbrido,manual,4,23.2,5,596,sedán_eficiente,Exento,4.7,1.8,142,5234,alta,122455,16,Eléctrico,5,No,104.4
+BMW,X5,seminuevo,2020,281200,sedan,gasolina,manual,4,15.9,5,452,sedán_familiar,0,4.72,1.74,153,10007,media,140325,15,Turbo,5,Sí,122.8
+Audi,Q3,seminuevo,2023,525800,sedan,gasolina,manual,4,14.2,5,412,sedán_familiar,0,4.96,1.85,148,10943,media,51458,15,Natural,4,No,129.5
+Geely,Okavango,seminuevo,2023,324200,suv,gasolina,automática,3,16.3,7,523,suv_compacto,0,4.39,1.83,161,3513,baja,60840,22,Natural,3,No,193.4
+Ford,Edge,nuevo,2025,550000,suv,gasolina,automática,3,14.1,5,585,suv_compacto,00,4.7,1.79,176,6252,media,0,19,Turbo,4,Sí,170.7
+Volvo,XC90,seminuevo,2022,520800,hatchback,gasolina,manual,4,15.5,5,260,compacto_urbano,0,3.63,1.58,155,9127,media,59640,15,Natural,5,Sí,125.3
+BYD,Song Plus,nuevo,2024,457300,suv,eléctrico,manual,0,7.1,7,688,suv_mediano,Exento,4.47,1.89,171,3879,media,0,22,Turbo,5,Sí,0.0
+JAC,S4,nuevo,2024,355400,suv,eléctrico,automática,0,6.5,5,668,suv_mediano,Exento,4.77,1.87,172,4182,baja,0,18,Eléctrico,4,Sí,0.0
+Dodge,Journey,seminuevo,2022,214700,hatchback,gasolina,automática,4,16.0,5,370,compacto_urbano,0,4.21,1.72,146,5124,alta,65382,16,Turbo,4,No,157.4
+Audi,A6,seminuevo,2023,660200,coupe,gasolina,manual,4,16.9,5,584,deportivo,0,4.78,1.84,146,8983,media,46154,16,Turbo,4,Sí,142.8
+Seat,Tarraco,seminuevo,2022,267100,minivan,gasolina,manual,6,14.9,5,696,familiar_7plazas,0,4.91,1.85,177,3599,alta,73551,17,Turbo,3,Sí,183.6
+Dodge,Charger,seminuevo,2021,193400,minivan,gasolina,automática,4,14.9,7,585,familiar_7plazas,0,4.4,1.94,172,3207,alta,129604,16,Natural,3,No,199.2
+Volvo,C40 Recharge,seminuevo,2023,608700,sedan,híbrido,automática,3,25.7,5,440,sedán_familiar,Exento,4.76,1.86,149,9664,media,48824,15,Eléctrico,3,Sí,102.3
+Chevrolet,Aveo,seminuevo,2022,200800,hatchback,gasolina,automática,4,14.4,5,324,compacto_urbano,0,4.21,1.55,163,4372,alta,72972,17,Natural,5,No,127.6
+RAM,2500,nuevo,2025,401000,sedan,gasolina,automática,6,15.8,5,465,compacto_urbano,00,4.43,1.83,154,5325,alta,0,14,Turbo,5,No,123.9
+GMC,Acadia,seminuevo,2020,231100,pickup,híbrido,automática,4,19.5,2,1744,pickup,Exento,5.26,1.88,183,6964,alta,148190,22,Turbo,5,No,87.2
+Nissan,X-Trail,nuevo,2024,485000,suv,eléctrico,automática,0,5.2,5,638,suv_mediano,Exento,4.48,1.84,176,4480,media,0,22,Eléctrico,4,Sí,0.0
+JAC,S3,seminuevo,2023,383300,suv,gasolina,manual,4,15.5,5,526,suv_compacto,0,4.81,1.86,162,3581,baja,53708,22,Natural,3,Sí,181.2
+MG,MG6,seminuevo,2022,201400,coupe,gasolina,automática,6,14.5,5,549,deportivo,0,4.64,1.86,149,3428,media,95454,17,Turbo,3,No,138.7
+BMW,Serie 1,seminuevo,2022,374500,suv,gasolina,automática,4,12.8,7,576,suv_premium,0,4.83,1.86,161,10824,media,48117,21,Natural,4,No,196.5
+Citroën,Berlingo,seminuevo,2023,442700,pickup,gasolina,automática,4,11.4,2,1834,pickup,0,5.69,1.87,192,8166,alta,38344,20,Natural,4,No,206.9
+GMC,Yukon,nuevo,2025,320400,suv,gasolina,manual,4,13.1,5,457,suv_compacto,00,4.23,1.87,179,4985,alta,0,18,Turbo,3,No,209.2
+Toyota,RAV4,nuevo,2025,426700,sedan,gasolina,manual,4,16.2,5,593,sedán_económico,00,4.4,1.88,145,5365,alta,0,15,Turbo,4,Sí,123.9
+BAIC,X25,seminuevo,2022,310700,suv,gasolina,automática,4,16.3,5,618,suv_mediano,0,4.7,1.79,171,4109,baja,76332,21,Natural,4,No,180.1
+Peugeot,Rifter,seminuevo,2023,452700,suv,gasolina,automática,6,13.1,7,429,suv_compacto,0,4.71,1.92,177,4549,media,45914,19,Natural,5,Sí,177.0
+Dodge,Journey,seminuevo,2020,123500,coupe,eléctrico,automática,0,5.1,5,496,sedán_eficiente,Exento,4.77,1.8,155,3770,alta,171265,15,Turbo,4,No,0.0
+BMW,Serie 1,seminuevo,2021,353700,suv,eléctrico,automática,0,6.9,7,524,suv_premium,Exento,4.83,1.88,172,9261,media,97100,21,Turbo,4,No,0.0
+Citroën,Berlingo,seminuevo,2023,202900,sedan,eléctrico,manual,0,6.9,5,481,sedán_eficiente,Exento,4.94,1.75,148,5304,alta,44500,13,Turbo,5,No,0.0
+Mercedes-Benz,Clase C,seminuevo,2021,424300,suv,gasolina,automática,4,15.8,7,681,suv_premium,0,4.79,1.88,168,10958,alta,124300,19,Turbo,4,Sí,203.1
+Ford,Bronco Sport,seminuevo,2023,203800,minivan,gasolina,manual,6,18.3,5,764,familiar_7plazas,0,5.06,1.99,186,3026,alta,57026,16,Natural,5,Sí,172.4
+Nissan,Qashqai,seminuevo,2023,361200,minivan,gasolina,automática,4,16.7,7,718,familiar_7plazas,0,4.74,1.76,182,3048,alta,31096,17,Turbo,4,Sí,169.5
+Geely,Azkarra,nuevo,2024,412700,pickup,gasolina,automática,4,12.2,2,1623,pickup,00,5.15,1.92,186,4128,media,0,22,Natural,4,Sí,197.9
+Mitsubishi,Outlander,nuevo,2024,346200,sedan,híbrido,automática,3,21.2,5,496,sedán_eficiente,Exento,4.69,1.69,142,3338,alta,0,16,Turbo,5,Sí,86.9
+BAIC,X25,seminuevo,2021,151300,suv,eléctrico,manual,0,6.2,5,438,suv_compacto,Exento,4.82,1.82,177,2867,media,62052,22,Eléctrico,5,No,0.0
+Honda,HR-V,seminuevo,2020,237300,suv,gasolina,automática,6,16.1,7,596,suv_compacto,0,4.88,1.8,162,5416,alta,91000,19,Natural,4,No,173.9
+Subaru,Outback,seminuevo,2019,94800,suv,gasolina,manual,4,13.9,7,621,suv_mediano,0,4.37,1.86,172,5209,alta,104448,20,Natural,4,No,172.5
+MG,MG HS,seminuevo,2022,250200,suv,gasolina,automática,3,16.3,7,584,suv_compacto,0,4.89,1.79,162,3382,media,99753,22,Natural,3,Sí,206.2
+Mazda,CX-5,seminuevo,2023,420000,sedan,gasolina,manual,4,17.8,5,403,sedán_familiar,0,4.59,1.84,153,3994,alta,67482,14,Turbo,4,Sí,137.7
+Ford,Edge,seminuevo,2021,231400,suv,gasolina,automática,3,13.2,7,615,suv_mediano,0,4.47,1.89,171,5010,media,137828,21,Natural,4,No,203.1
+Nissan,March,seminuevo,2022,406900,pickup,gasolina,automática,6,10.2,2,1653,pickup,0,5.26,1.97,181,7286,alta,62460,22,Natural,5,No,202.0
+Suzuki,Vitara,seminuevo,2022,351900,suv,gasolina,automática,3,16.2,5,679,suv_mediano,0,4.36,1.89,160,4858,media,73638,21,Turbo,4,Sí,162.5
+BMW,Serie 5,seminuevo,2021,403000,hatchback,eléctrico,automática,0,7.0,5,268,compacto_urbano,Exento,3.91,1.69,163,9188,alta,114824,14,Turbo,5,No,0.0
+Mazda,Mazda3,nuevo,2025,484100,suv,híbrido,automática,4,23.2,5,688,suv_mediano,Exento,5.09,1.87,172,5763,alta,0,18,Turbo,4,Sí,110.0
+Dodge,Journey,seminuevo,2022,190200,minivan,híbrido,manual,6,22.0,7,556,familiar_7plazas,Exento,4.73,1.83,194,3475,alta,58926,17,Turbo,4,Sí,103.4
+BAIC,X35,seminuevo,2022,182100,minivan,gasolina,manual,6,17.0,7,567,familiar_7plazas,0,4.57,1.95,168,4239,media,55749,16,Turbo,4,Sí,208.4
+Volvo,XC90,seminuevo,2022,492900,minivan,gasolina,automática,6,14.4,7,651,familiar_7plazas,0,4.33,1.91,171,9425,media,83223,16,Natural,4,Sí,206.3
+Hyundai,Venue,seminuevo,2020,257700,suv,gasolina,automática,4,13.0,7,670,suv_mediano,0,5.07,1.82,172,5607,alta,132000,21,Turbo,4,No,202.4
+BMW,Serie 2,nuevo,2024,778100,hatchback,gasolina,automática,4,15.0,5,296,compacto_urbano,00,3.86,1.58,157,9442,media,0,17,Natural,4,No,126.7
+Peugeot,Rifter,seminuevo,2020,204200,minivan,gasolina,automática,4,15.1,7,708,familiar_7plazas,0,4.35,1.85,165,3559,alta,106965,18,Natural,5,No,184.3
+Acura,RDX,seminuevo,2023,539200,hatchback,gasolina,manual,3,17.5,5,306,compacto_urbano,0,3.8,1.61,162,7688,media,67070,14,Turbo,3,Sí,128.5
+Citroën,C3,nuevo,2025,437100,minivan,gasolina,automática,4,14.0,5,626,familiar_7plazas,00,5.09,1.77,173,3356,alta,0,15,Turbo,4,Sí,180.1
+GMC,Terrain,nuevo,2024,412100,hatchback,gasolina,automática,3,16.4,5,386,compacto_urbano,00,3.8,1.67,155,4185,alta,0,16,Turbo,5,Sí,122.3
+Ford,Expedition,seminuevo,2019,163700,suv,híbrido,automática,6,24.9,5,474,suv_compacto,Exento,4.84,1.9,172,4582,media,171438,21,Eléctrico,5,Sí,85.2
+Subaru,Crosstrek,nuevo,2025,567800,suv,eléctrico,automática,0,6.1,7,567,suv_compacto,Exento,4.72,1.9,162,5467,alta,0,21,Eléctrico,4,Sí,0.0
+Chery,Tiggo 4,seminuevo,2022,206600,suv,gasolina,manual,4,13.0,7,575,suv_compacto,0,5.0,1.89,161,3782,media,46599,19,Natural,4,Sí,209.3
+GMC,Terrain,nuevo,2025,436600,hatchback,híbrido,automática,4,25.0,5,320,compacto_urbano,Exento,3.67,1.63,147,3677,alta,0,17,Turbo,5,Sí,80.6
+GMC,Sierra,nuevo,2025,277676,sedan,gasolina,automática,4,13.9,5,551,sedán_familiar,00,4.46,1.82,142,4407,alta,0,14,Natural,3,Sí,151.4
+Skoda,Fabia,nuevo,2025,332200,sedan,gasolina,automática,4,17.9,5,435,sedán_familiar,00,4.84,1.83,144,3280,alta,0,13,Turbo,5,Sí,138.2
+Dodge,Journey,nuevo,2025,633100,suv,híbrido,automática,4,22.9,7,511,suv_compacto,Exento,4.28,1.79,163,5572,media,0,20,Eléctrico,4,Sí,86.9
+Mazda,CX-3,seminuevo,2023,363600,suv,eléctrico,automática,0,7.1,7,505,suv_compacto,Exento,4.67,1.85,172,4223,alta,62432,18,Eléctrico,4,Sí,0.0
+BAIC,X25,seminuevo,2022,193100,suv,gasolina,automática,4,14.2,5,641,suv_mediano,0,5.06,1.89,160,2528,media,66207,18,Natural,5,Sí,207.9
+Geely,Okavango,seminuevo,2022,240500,pickup,gasolina,automática,6,10.9,2,1642,pickup,0,5.07,1.86,181,3598,media,83409,25,Turbo,5,Sí,219.8
+BMW,X3,nuevo,2025,607100,suv,gasolina,automática,3,16.2,5,632,suv_premium,00,4.75,1.79,165,7051,alta,0,18,Turbo,4,Sí,187.8
+BAIC,X55,nuevo,2025,421200,suv,gasolina,automática,4,15.5,7,460,suv_compacto,00,4.89,1.78,173,3572,media,0,22,Turbo,3,No,195.9
+Chrysler,300,seminuevo,2019,135000,minivan,gasolina,automática,4,14.3,5,778,familiar_7plazas,0,4.82,1.93,172,3010,alta,98658,16,Natural,4,No,167.7
+Skoda,Scala,seminuevo,2020,169900,sedan,gasolina,automática,4,15.1,5,506,compacto_urbano,0,4.52,1.85,151,3489,alta,157250,14,Natural,5,Sí,131.9
+Subaru,Impreza,seminuevo,2023,500700,suv,gasolina,automática,3,14.7,5,588,suv_compacto,0,4.38,1.86,169,4993,media,54134,21,Natural,5,Sí,208.4
+MG,MG5,seminuevo,2022,298800,sedan,gasolina,manual,4,16.7,5,577,sedán_familiar,0,4.91,1.87,142,4238,baja,75228,14,Turbo,4,No,143.2
+Chery,Tiggo 2,seminuevo,2020,124400,suv,gasolina,automática,4,16.1,7,590,suv_compacto,0,4.61,1.88,178,3535,media,139610,22,Turbo,3,No,187.1
+Ford,Escape,seminuevo,2021,196900,suv,gasolina,automática,6,15.8,7,562,suv_compacto,0,4.61,1.81,166,6394,alta,80368,19,Natural,4,No,197.4
+Acura,ILX,seminuevo,2023,427000,suv,gasolina,manual,4,14.4,5,446,suv_compacto,0,4.34,1.88,179,7880,media,39720,19,Natural,4,Sí,162.9
+BMW,X1,nuevo,2025,610900,hatchback,gasolina,automática,4,16.3,5,390,compacto_urbano,00,3.77,1.66,149,7048,media,0,15,Turbo,4,Sí,143.4
+Mazda,CX-30,nuevo,2025,415200,sedan,gasolina,automática,4,18.0,5,513,sedán_familiar,00,4.87,1.7,155,3501,alta,0,16,Turbo,4,No,140.1
+Subaru,Forester,seminuevo,2019,117800,pickup,híbrido,automática,6,19.4,2,1965,pickup,Exento,5.15,1.89,179,7006,alta,148020,23,Turbo,3,Sí,104.1
+RAM,1200,seminuevo,2020,240000,pickup,gasolina,automática,6,12.1,2,1822,pickup,0,5.8,1.92,175,7470,alta,153590,23,Natural,5,No,186.3
+Audi,Q8,seminuevo,2021,378600,hatchback,gasolina,automática,4,14.6,5,321,compacto_urbano,0,3.64,1.78,161,10140,alta,90508,14,Natural,5,Sí,158.4
+RAM,1500,nuevo,2025,638700,suv,gasolina,automática,4,16.2,5,490,suv_compacto,00,4.41,1.82,171,4115,media,0,22,Turbo,5,Sí,164.0
+Chery,Tiggo 8,seminuevo,2021,196300,hatchback,gasolina,automática,3,13.8,5,306,compacto_urbano,0,3.61,1.66,155,4151,media,104660,16,Natural,3,Sí,127.4
+MG,MG5,nuevo,2025,453400,coupe,eléctrico,automática,0,5.9,5,569,sedán_eficiente,Exento,4.58,1.7,146,2779,media,0,17,Turbo,4,Sí,0.0
+Mitsubishi,L200,nuevo,2024,446300,hatchback,gasolina,automática,6,16.9,5,282,compacto_urbano,00,3.72,1.55,163,5324,alta,0,15,Turbo,4,Sí,143.8
+Hyundai,Palisade,seminuevo,2020,195200,suv,eléctrico,automática,0,5.6,7,485,suv_compacto,Exento,4.77,1.91,180,5829,alta,118450,19,Eléctrico,4,No,0.0
+Hyundai,Grand i10,seminuevo,2019,192200,pickup,gasolina,automática,6,10.5,2,1952,pickup,0,5.33,1.96,186,7537,alta,109938,24,Turbo,5,Sí,207.0
+BYD,Song Plus,seminuevo,2020,137100,sedan,gasolina,automática,4,14.8,5,426,sedán_económico,0,4.54,1.86,144,3620,media,130365,16,Turbo,3,No,129.4
+BYD,Dolphin,seminuevo,2022,265900,hatchback,gasolina,automática,4,14.5,5,298,compacto_urbano,0,3.89,1.68,162,3852,media,74235,14,Natural,4,No,124.8
+MG,MG5,seminuevo,2022,242000,sedan,gasolina,automática,4,17.6,5,560,compacto_urbano,0,4.64,1.7,145,3807,media,53052,13,Natural,4,No,155.6
+Chery,Tiggo 4,seminuevo,2020,218000,coupe,gasolina,automática,4,17.9,5,494,deportivo,0,4.43,1.69,149,3039,media,119000,14,Natural,5,No,129.8
+Hyundai,Accent,nuevo,2024,574500,suv,gasolina,automática,4,13.4,5,598,suv_compacto,00,4.94,1.84,177,6345,alta,0,20,Turbo,4,Sí,189.7
+Geely,Azkarra,seminuevo,2023,226400,hatchback,gasolina,manual,4,18.2,5,292,compacto_urbano,0,4.28,1.74,149,3367,media,58532,15,Turbo,4,Sí,144.8
+Honda,Civic,seminuevo,2022,338900,coupe,gasolina,manual,4,17.8,5,533,deportivo,0,4.62,1.85,154,4718,alta,56061,15,Natural,5,Sí,136.8
+Hyundai,Starex,nuevo,2025,268600,sedan,gasolina,manual,4,17.9,5,467,sedán_familiar,00,4.76,1.79,149,3705,alta,0,16,Turbo,5,No,143.3
+Chevrolet,Blazer,seminuevo,2022,369600,suv,gasolina,manual,4,16.1,5,572,suv_compacto,0,4.94,1.82,168,4402,alta,58209,21,Natural,4,No,186.1
+Mazda,CX-3,seminuevo,2023,400200,suv,gasolina,manual,4,16.0,5,663,suv_mediano,0,4.91,1.79,176,4555,alta,41386,19,Natural,4,Sí,206.7
+Chrysler,Pacifica,seminuevo,2022,259700,suv,gasolina,automática,4,14.5,5,415,suv_compacto,0,4.42,1.85,174,5943,media,78840,20,Turbo,5,Sí,170.2
+Mercedes-Benz,Clase A,seminuevo,2022,529700,sedan,gasolina,manual,4,17.8,5,565,sedán_económico,0,4.77,1.73,148,7082,alta,45873,14,Turbo,4,Sí,148.6
+Mitsubishi,Outlander,nuevo,2024,684100,suv,eléctrico,automática,0,6.1,7,578,suv_compacto,Exento,4.61,1.81,169,6132,media,0,18,Eléctrico,5,Sí,0.0
+Mercedes-Benz,Clase E,nuevo,2024,922600,sedan,gasolina,automática,4,18.4,5,563,sedán_familiar,00,4.53,1.74,152,10900,alta,0,14,Turbo,5,Sí,129.5
+Toyota,Corolla Hybrid,seminuevo,2022,213900,suv,híbrido,automática,6,18.2,7,551,suv_compacto,Exento,4.43,1.84,172,6388,alta,78732,22,Turbo,5,Sí,85.8
+Geely,Okavango,nuevo,2025,376900,hatchback,híbrido,manual,4,20.4,5,370,compacto_urbano,Exento,3.69,1.61,162,4439,baja,0,14,Eléctrico,4,Sí,96.9
+BMW,X3,nuevo,2025,871700,suv,gasolina,automática,4,13.7,5,640,suv_premium,00,4.25,1.87,178,7291,media,0,22,Turbo,5,No,175.0
+BAIC,X35,seminuevo,2022,278000,sedan,gasolina,automática,4,15.2,5,545,sedán_familiar,0,4.92,1.88,144,4266,baja,62727,16,Natural,5,Sí,132.6
+Audi,A3,seminuevo,2019,247400,minivan,gasolina,automática,4,16.4,5,675,familiar_7plazas,0,5.01,1.95,169,8776,alta,174420,18,Natural,4,Sí,197.6
+Chevrolet,Colorado,seminuevo,2021,210800,suv,gasolina,automática,4,13.3,5,527,suv_compacto,0,4.4,1.9,169,4420,media,125972,20,Natural,3,Sí,163.6
+BMW,X1,seminuevo,2023,564300,coupe,gasolina,manual,4,15.7,5,575,deportivo,0,5.0,1.75,149,10072,media,40804,14,Natural,4,Sí,138.3
+Seat,Ibiza,nuevo,2024,539800,coupe,gasolina,automática,4,17.1,5,409,deportivo,00,4.56,1.81,154,3199,alta,0,14,Turbo,3,Sí,159.9
+Toyota,Avanza,seminuevo,2020,147200,pickup,gasolina,automática,6,9.4,5,1742,pickup,0,5.56,1.88,195,7233,alta,143955,25,Turbo,4,No,219.8
+Ford,Expedition,nuevo,2025,384400,sedan,gasolina,manual,3,14.9,5,600,sedán_económico,00,4.65,1.8,154,5142,alta,0,15,Turbo,4,Sí,122.9
+BYD,Qin DM-i,seminuevo,2023,402100,minivan,gasolina,manual,4,14.7,5,721,familiar_7plazas,0,4.38,1.79,183,2805,media,63534,15,Natural,5,Sí,170.7
+Chrysler,300,seminuevo,2021,151900,minivan,gasolina,automática,4,17.9,7,642,familiar_7plazas,0,5.02,1.84,188,3389,alta,66012,16,Turbo,5,Sí,173.3
+Volvo,XC40,seminuevo,2023,530100,suv,eléctrico,automática,0,5.9,7,493,suv_premium,Exento,4.3,1.84,174,10423,media,61342,19,Eléctrico,4,Sí,0.0
+BYD,Qin DM-i,seminuevo,2022,226500,minivan,gasolina,manual,4,16.6,7,706,familiar_7plazas,0,4.33,1.92,191,3489,media,56100,18,Natural,3,Sí,206.7
+Audi,A3,nuevo,2025,815200,coupe,eléctrico,manual,0,6.8,5,457,sedán_eficiente,Exento,4.98,1.81,147,9142,alta,0,17,Eléctrico,4,Sí,0.0
+Skoda,Scala,nuevo,2025,342800,coupe,gasolina,automática,3,16.7,5,440,deportivo,00,4.65,1.77,149,3306,alta,0,16,Turbo,4,Sí,155.2
+Toyota,Prius,seminuevo,2021,154300,coupe,híbrido,automática,4,24.5,5,420,sedán_eficiente,Exento,4.62,1.84,149,5041,alta,118596,14,Turbo,5,No,105.2
+Volkswagen,Vento,seminuevo,2022,538600,pickup,gasolina,automática,6,10.9,2,1905,pickup,0,5.48,1.93,184,8082,alta,100278,25,Turbo,4,Sí,194.8
+Citroën,C3,nuevo,2025,320700,suv,gasolina,automática,4,15.6,7,586,suv_compacto,00,4.84,1.8,167,5398,media,0,22,Turbo,4,Sí,167.9
+Chevrolet,Aveo,seminuevo,2023,276900,hatchback,eléctrico,automática,0,5.3,5,300,compacto_urbano,Exento,3.73,1.76,157,4872,alta,42488,14,Turbo,3,Sí,0.0
+Dodge,Durango,nuevo,2024,499000,coupe,gasolina,manual,3,16.2,5,412,deportivo,00,4.69,1.77,151,5082,alta,0,15,Turbo,4,Sí,153.3
+Skoda,Octavia,seminuevo,2023,472700,pickup,gasolina,automática,6,12.2,2,1640,pickup,0,5.32,1.89,184,6546,alta,39054,24,Turbo,5,Sí,208.1
+Audi,Q3,seminuevo,2021,485400,suv,gasolina,automática,6,13.9,5,491,suv_premium,0,4.65,1.88,170,7472,media,133696,22,Turbo,5,No,190.6
+Acura,MDX,nuevo,2025,942700,pickup,gasolina,automática,6,9.4,5,1574,pickup,00,5.04,1.86,183,10217,media,0,25,Natural,4,Sí,219.5
+Mercedes-Benz,Clase C,nuevo,2025,887000,coupe,gasolina,automática,4,14.0,5,572,deportivo,00,4.82,1.85,153,9298,media,0,16,Turbo,5,Sí,146.2
+Skoda,Kodiaq,seminuevo,2022,327800,suv,gasolina,automática,3,15.5,5,626,suv_mediano,0,4.95,1.91,180,6410,alta,64020,21,Natural,5,Sí,160.4
+Peugeot,2008,nuevo,2025,384500,coupe,gasolina,automática,3,15.6,5,542,deportivo,00,4.48,1.71,155,3023,alta,0,17,Turbo,4,Sí,152.7
+MG,MG ZS,nuevo,2024,402300,sedan,eléctrico,manual,0,7.0,5,540,sedán_eficiente,Exento,4.55,1.84,147,4459,media,0,13,Eléctrico,4,No,0.0
+Mazda,CX-5,seminuevo,2021,166600,suv,híbrido,automática,4,20.9,5,671,suv_mediano,Exento,4.63,1.86,180,4469,media,118412,22,Eléctrico,3,No,82.0
+Audi,Q8,nuevo,2025,808100,sedan,gasolina,automática,4,17.1,5,406,compacto_urbano,00,4.88,1.75,154,8825,media,0,15,Turbo,4,Sí,146.5
+Geely,Coolray,seminuevo,2020,126100,hatchback,gasolina,manual,3,16.6,5,303,compacto_urbano,0,4.07,1.73,158,2921,baja,146305,15,Natural,4,No,157.6
+Volvo,S60,seminuevo,2020,342700,sedan,gasolina,automática,4,16.3,5,547,sedán_económico,0,4.94,1.76,149,8656,media,126835,16,Turbo,3,No,125.4
+Nissan,Sentra,nuevo,2025,299600,sedan,eléctrico,automática,0,5.9,5,528,sedán_económico,Exento,4.5,1.82,151,4153,alta,0,16,Turbo,5,Sí,0.0
+JAC,S3,seminuevo,2023,369600,suv,gasolina,automática,4,13.7,5,552,suv_compacto,0,4.81,1.91,180,4460,media,66274,19,Natural,3,Sí,165.8
