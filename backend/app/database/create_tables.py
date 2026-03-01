@@ -10,7 +10,12 @@ def crear_tablas():
     print("🔄 Creando tablas en la base de datos...")
     
     try:
+        # 👇 AGREGAR ESTA LÍNEA (Borra las tablas viejas) 👇
+        Base.metadata.drop_all(bind=engine) 
+        
+        # Crea las tablas con la nueva estructura
         Base.metadata.create_all(bind=engine)
+        
         print("✅ Tablas creadas exitosamente:")
         print("   - vehiculos")
         print("   - usuarios")

@@ -1,292 +1,150 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, ArrowRight, ArrowLeft, Sparkles } from 'lucide-react';
-import PropTypes from 'prop-types';
+import React, { useState } from 'react';
+import { 
+  Building2, Car, Mountain, Briefcase, Key, 
+  Users, Settings, Fuel, Zap, Leaf, CalendarDays 
+} from 'lucide-react';
 
-const PreferenceWizard = ({ isOpen, onClose, onComplete }) => {
-  const [step, setStep] = useState(1);
-  const [formData, setFormData] = useState({
-    presupuestomin: 200000,
-    presupuestomax: 600000,
-    usodiario: false,
-    usofinsemana: false,
-    usofamiliar: false,
-    prioridadahorro: false,
-    prioridadseguridad: false,
-    prioridadholograma: false,
-    email: ''
+const TestWizard = ({ onComplete }) => {
+  const [presupuestoMax, setPresupuestoMax] = useState(300000);
+  
+  // AHORA SON ARREGLOS PARA PERMITIR MÚLTIPLES SELECCIONES
+  const [selecciones, setSelecciones] = useState({
+    uso: [],
+    pasajeros: [],
+    transmision: [],
+    combustible: [],
+    engomado: []
   });
 
-  const handleNext = () => {
-    if (step < 4) setStep(step + 1);
+  const toggleSeleccion = (categoria, valor) => {
+    setSelecciones(prev => {
+      const actual = prev[categoria];
+      // Si ya está seleccionado, lo quitamos. Si no, lo agregamos.
+      if (actual.includes(valor)) {
+        return { ...prev, [categoria]: actual.filter(v => v !== valor) };
+      } else {
+        return { ...prev, [categoria]: [...actual, valor] };
+      }
+    });
   };
 
-  const handleBack = () => {
-    if (step > 1) setStep(step - 1);
+  const handleVerResultados = () => {
+    const preferencias = {
+      presupuesto_max: presupuestoMax,
+      uso_principal: selecciones.uso, // Es un array
+      num_pasajeros_habitual: selecciones.pasajeros, // Es un array
+      transmision_preferida: selecciones.transmision, // Es un array
+      combustible_preferido: selecciones.combustible, // Es un array
+      color_engomado: selecciones.engomado // Es un array
+    };
+    onComplete(preferencias);
   };
 
-  const handleSubmit = () => {
-    if (!formData.email || formData.email.trim() === '') {
-      alert('⚠️ Por favor ingresa tu email');
-      return;
-    }
-    
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      alert('⚠️ Por favor ingresa un email válido');
-      return;
-    }
-    
-    console.log('📧 Datos del wizard completados:', formData);
-    onComplete(formData);
+  const renderBurbuja = (categoria, valor, Icono, etiqueta) => {
+    const isSelected = selecciones[categoria].includes(valor);
+    return (
+      <div className="flex flex-col items-center gap-3 cursor-pointer" onClick={() => toggleSeleccion(categoria, valor)}>
+        <div className={`w-20 h-20 rounded-full flex items-center justify-center transition-all duration-300 shadow-sm ${
+          isSelected 
+            ? 'bg-blue-50 border-2 border-blue-600 text-blue-600 scale-110' 
+            : 'bg-white border-2 border-transparent text-gray-400 hover:bg-gray-50'
+        }`}>
+          <Icono size={32} strokeWidth={isSelected ? 2.5 : 2} />
+        </div>
+        <span className={`text-sm font-semibold ${isSelected ? 'text-blue-600' : 'text-gray-500'}`}>
+          {etiqueta}
+        </span>
+      </div>
+    );
   };
-
-  if (!isOpen) return null;
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-        onClick={onClose}
-      >
-        <motion.div
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          exit={{ scale: 0.9, opacity: 0 }}
-          className="bg-slate-900 border border-slate-700 rounded-3xl max-w-2xl w-full p-8 relative"
-          onClick={(e) => e.stopPropagation()}
-        >
-          {/* Close Button */}
-          <button
-            onClick={onClose}
-            className="absolute top-6 right-6 p-2 hover:bg-slate-800 rounded-full transition-colors"
-            type="button"
-          >
-            <X size={24} className="text-slate-400" />
-          </button>
-
-          {/* Progress Bar */}
-          <div className="mb-8">
-            <div className="flex justify-between mb-2">
-              <span className="text-sm font-semibold text-slate-400">Paso {step} de 4</span>
-              <span className="text-sm font-semibold text-purple-400">{(step / 4 * 100).toFixed(0)}%</span>
-            </div>
-            <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
-              <motion.div
-                className="h-full bg-gradient-to-r from-purple-600 to-pink-600"
-                initial={{ width: 0 }}
-                animate={{ width: `${(step / 4) * 100}%` }}
-                transition={{ duration: 0.3 }}
-              />
-            </div>
+    <div className="min-h-screen bg-slate-50 py-12 px-4">
+      <div className="max-w-4xl mx-auto space-y-16">
+        
+        {/* SECCIÓN 1: Diseña tu auto ideal */}
+        <section className="text-center space-y-8">
+          <div>
+            <h2 className="text-4xl font-black text-gray-900 mb-2">Diseña tu auto ideal</h2>
+            <p className="text-gray-500">Escoge todo lo que se acople a tus necesidades.</p>
           </div>
 
-          {/* Step 1: Presupuesto */}
-          {step === 1 && (
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              className="space-y-6"
-            >
-              <div>
-                <h2 className="text-3xl font-black text-slate-50 mb-2">¿Cuánto quieres invertir?</h2>
-                <p className="text-slate-400">Define tu rango de presupuesto</p>
-              </div>
+          <div className="bg-white rounded-3xl p-8 shadow-sm max-w-xl mx-auto border border-gray-100">
+            <h3 className="text-gray-500 font-medium mb-4">Presupuesto Máximo</h3>
+            <p className="text-4xl font-black text-blue-600 mb-6">
+              ${presupuestoMax.toLocaleString('es-MX')}
+            </p>
+            <input 
+              type="range" 
+              min="100000" 
+              max="1500000" 
+              step="50000"
+              value={presupuestoMax}
+              onChange={(e) => setPresupuestoMax(Number(e.target.value))}
+              className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
+            />
+          </div>
 
-              <div className="space-y-4">
-                <div>
-                  <label htmlFor="wizard-min-price" className="text-sm font-semibold text-slate-300 mb-2 block">
-                    Presupuesto Mínimo
-                  </label>
-                  <input
-                    id="wizard-min-price"
-                    type="range"
-                    min="100000"
-                    max="1000000"
-                    step="50000"
-                    value={formData.presupuestomin}
-                    onChange={(e) => setFormData({ ...formData, presupuestomin: Number.parseInt(e.target.value, 10) })}
-                    className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-purple-600"
-                  />
-                  <p className="text-2xl font-bold text-purple-400 mt-2">
-                    ${formData.presupuestomin.toLocaleString('es-MX')}
-                  </p>
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-10 max-w-3xl mx-auto pt-8">
+            {renderBurbuja('uso', 'Ciudad', Building2, 'Ciudad')}
+            {renderBurbuja('uso', 'Carretera', Car, 'Carretera')}
+            {renderBurbuja('uso', 'Aventurero', Mountain, 'Aventurero')}
+            {renderBurbuja('uso', 'Ejecutivo', Briefcase, 'Ejecutivo')}
+            {renderBurbuja('uso', 'Primer Auto', Key, 'Primer Auto')}
+            
+            {renderBurbuja('pasajeros', '2', Users, '1 ó 2 (aprox)')}
+            {renderBurbuja('pasajeros', '5', Users, '4 - 5 (aprox)')}
+            {renderBurbuja('pasajeros', '7', Users, 'Más de 5 (aprx)')}
+            
+            {renderBurbuja('transmision', 'Automática', Settings, 'Automático')}
+            {renderBurbuja('transmision', 'Manual', Settings, 'Manual')}
+            
+            {renderBurbuja('combustible', 'Gasolina', Fuel, 'Gasolina')}
+            {renderBurbuja('combustible', 'Híbrido', Zap, 'Híbrido')}
+            {renderBurbuja('combustible', 'Eléctrico', Zap, 'Eléctrico')}
+            {renderBurbuja('combustible', 'Max Ahorro', Leaf, 'Max Ahorro')}
+          </div>
+        </section>
+
+        {/* SECCIÓN 2: Planea tu movilidad */}
+        <section className="text-center space-y-8 pt-8">
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">Planea tu movilidad (Hoy No Circula)</h2>
+            <p className="text-gray-500 text-sm max-w-2xl mx-auto">
+              Selecciona un engomado para conocer su restricción y evitar contratiempos.
+            </p>
+          </div>
+
+          <div className="flex justify-center gap-6">
+            {[
+              { color: 'Amarillo', bg: 'bg-yellow-400' },
+              { color: 'Rosa', bg: 'bg-pink-500' },
+              { color: 'Rojo', bg: 'bg-red-500' },
+              { color: 'Verde', bg: 'bg-green-500' },
+              { color: 'Azul', bg: 'bg-blue-500' }
+            ].map((eng) => (
+              <div key={eng.color} className="flex flex-col items-center gap-2 cursor-pointer" onClick={() => toggleSeleccion('engomado', eng.color)}>
+                <div className={`w-20 h-20 rounded-full flex items-center justify-center bg-white shadow-sm transition-all ${selecciones.engomado.includes(eng.color) ? 'ring-4 ring-blue-200 scale-110' : ''}`}>
+                  <div className={`w-14 h-14 rounded-full ${eng.bg}`}></div>
                 </div>
-                <div>
-                  <label htmlFor="wizard-max-price" className="text-sm font-semibold text-slate-300 mb-2 block">
-                    Presupuesto Máximo
-                  </label>
-                  <input
-                    id="wizard-max-price"
-                    type="range"
-                    min="200000"
-                    max="2000000"
-                    step="50000"
-                    value={formData.presupuestomax}
-                    onChange={(e) => setFormData({ ...formData, presupuestomax: Number.parseInt(e.target.value, 10) })}
-                    className="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-pink-600"
-                  />
-                  <p className="text-2xl font-bold text-pink-400 mt-2">
-                    ${formData.presupuestomax.toLocaleString('es-MX')}
-                  </p>
-                </div>
+                <span className="text-sm font-semibold text-gray-600">{eng.color}</span>
               </div>
-            </motion.div>
-          )}
+            ))}
+          </div>
+          {/* Aquí mantienes la tarjeta de restricciones igual */}
+        </section>
 
-          {/* Step 2: Tipo de Uso */}
-          {step === 2 && (
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              className="space-y-6"
-            >
-              <div>
-                <h2 className="text-3xl font-black text-slate-50 mb-2">¿Cómo lo usarás?</h2>
-                <p className="text-slate-400">Selecciona todas las que apliquen</p>
-              </div>
-
-              <div className="grid grid-cols-1 gap-4">
-                {[
-                  { key: 'usodiario', label: 'Uso Diario', desc: 'Para ir al trabajo o escuela' },
-                  { key: 'usofinsemana', label: 'Fin de Semana', desc: 'Para paseos y recreación' },
-                  { key: 'usofamiliar', label: 'Familiar', desc: 'Para toda la familia' }
-                ].map((uso) => (
-                  <button
-                    key={uso.key}
-                    type="button"
-                    onClick={() => setFormData({ ...formData, [uso.key]: !formData[uso.key] })}
-                    className={`p-6 rounded-xl border-2 transition-all text-left ${
-                      formData[uso.key]
-                        ? 'border-purple-500 bg-purple-500/10'
-                        : 'border-slate-700 bg-slate-800/50 hover:border-slate-600'
-                    }`}
-                  >
-                    <h3 className="text-xl font-bold text-slate-50 mb-1">{uso.label}</h3>
-                    <p className="text-slate-400 text-sm">{uso.desc}</p>
-                  </button>
-                ))}
-              </div>
-            </motion.div>
-          )}
-
-          {/* Step 3: Prioridades */}
-          {step === 3 && (
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              className="space-y-6"
-            >
-              <div>
-                <h2 className="text-3xl font-black text-slate-50 mb-2">¿Qué es más importante?</h2>
-                <p className="text-slate-400">Elige tus prioridades principales</p>
-              </div>
-
-              <div className="grid grid-cols-1 gap-4">
-                {[
-                  { key: 'prioridadahorro', label: 'Ahorro de Gasolina', icon: '⛽' },
-                  { key: 'prioridadseguridad', label: 'Seguridad Máxima', icon: '🛡️' },
-                  { key: 'prioridadholograma', label: 'Holograma 00', icon: '🍃' }
-                ].map((prioridad) => (
-                  <button
-                    key={prioridad.key}
-                    type="button"
-                    onClick={() => setFormData({ ...formData, [prioridad.key]: !formData[prioridad.key] })}
-                    className={`p-6 rounded-xl border-2 transition-all text-left flex items-center gap-4 ${
-                      formData[prioridad.key]
-                        ? 'border-purple-500 bg-purple-500/10'
-                        : 'border-slate-700 bg-slate-800/50 hover:border-slate-600'
-                    }`}
-                  >
-                    <span className="text-4xl">{prioridad.icon}</span>
-                    <h3 className="text-xl font-bold text-slate-50">{prioridad.label}</h3>
-                  </button>
-                ))}
-              </div>
-            </motion.div>
-          )}
-
-          {/* Step 4: Email Capture */}
-          {step === 4 && (
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              className="space-y-6"
-            >
-              <div className="text-center">
-                <Sparkles size={48} className="text-purple-400 mx-auto mb-4" />
-                <h2 className="text-3xl font-black text-slate-50 mb-2">
-                  ¡Tenemos 15 autos perfectos para ti!
-                </h2>
-                <p className="text-slate-400">Ingresa tu email para ver los resultados</p>
-              </div>
-
-              <input
-                aria-label="Correo electrónico"
-                type="email"
-                placeholder="tu@email.com"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                onKeyPress={(e) => {
-                  if (e.key === 'Enter' && formData.email) {
-                    handleSubmit();
-                  }
-                }}
-                className="w-full px-6 py-4 bg-slate-800 border-2 border-slate-700 rounded-xl text-slate-50 text-lg focus:border-purple-500 focus:outline-none transition-colors"
-                autoFocus
-              />
-
-              <button
-                onClick={handleSubmit}
-                disabled={!formData.email}
-                className="w-full py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 disabled:opacity-50 disabled:cursor-not-allowed rounded-xl font-bold text-white text-lg transition-all flex items-center justify-center gap-2"
-                type="button"
-              >
-                Ver Mis Resultados
-                <Sparkles size={20} />
-              </button>
-            </motion.div>
-          )}
-
-          {/* Navigation Buttons */}
-          {step < 4 && (
-            <div className="flex justify-between mt-8 pt-6 border-t border-slate-800">
-              <button
-                onClick={handleBack}
-                disabled={step === 1}
-                className="px-6 py-3 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-xl font-semibold text-slate-300 transition-colors flex items-center gap-2"
-                type="button"
-              >
-                <ArrowLeft size={20} />
-                Atrás
-              </button>
-              <button
-                onClick={handleNext}
-                className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 rounded-xl font-semibold text-white transition-all flex items-center gap-2"
-                type="button"
-              >
-                Siguiente
-                <ArrowRight size={20} />
-              </button>
-            </div>
-          )}
-        </motion.div>
-      </motion.div>
-    </AnimatePresence>
+        <div className="flex justify-center pb-12">
+          <button 
+            onClick={handleVerResultados}
+            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-16 rounded-full text-lg shadow-lg shadow-blue-600/30 transition-all transform hover:scale-105"
+          >
+            Ver Resultados
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
 
-PreferenceWizard.propTypes = {
-  isOpen: PropTypes.bool,
-  onClose: PropTypes.func,
-  onComplete: PropTypes.func
-};
-
-export default PreferenceWizard;
+export default TestWizard;

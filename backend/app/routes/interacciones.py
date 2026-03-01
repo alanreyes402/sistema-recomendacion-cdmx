@@ -7,6 +7,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from pydantic import BaseModel
 from datetime import datetime
+from typing import Optional
 
 from app.database.connection import get_db
 from app.models.interaccion import Interaccion
@@ -18,12 +19,15 @@ router = APIRouter(
     tags=["Interacciones"]
 )
 
-
 # Schemas
 class InteraccionCreate(BaseModel):
     usuario_id: int
     vehiculo_id: int
-    tipo_interaccion: str  # "vista", "click", "favorito", "contacto", "compartir"
+    tipo_interaccion: str  # "vista", "click", "favorito", "contacto", "compartir", "calificacion"
+    
+    # NUEVO: Permitimos recibir la calificación y el peso desde el frontend
+    calificacion: Optional[float] = None
+    peso: Optional[float] = None
 
 
 # Endpoints
@@ -34,13 +38,6 @@ async def registrar_interaccion(
 ):
     """
     Registrar interacción usuario-vehículo para aprendizaje
-    
-    **Tipos de interacción y sus pesos:**
-    - **vista**: 1.0 - El usuario vio el vehículo
-    - **click**: 2.0 - El usuario hizo clic para ver detalles
-    - **favorito**: 5.0 - El usuario lo marcó como favorito ❤️
-    - **contacto**: 10.0 - El usuario contactó al vendedor
-    - **compartir**: 3.0 - El usuario compartió el vehículo
     """
     
     # Verificar que el usuario existe
@@ -53,23 +50,26 @@ async def registrar_interaccion(
     if not vehiculo:
         raise HTTPException(status_code=404, detail=f"Vehículo {interaccion.vehiculo_id} no encontrado")
     
-    # Mapear tipo a peso
+    # Mapear tipo a peso por defecto (si el front no manda uno)
     pesos = {
         "vista": 1.0,
         "click": 2.0,
         "favorito": 5.0,
         "contacto": 10.0,
-        "compartir": 3.0
+        "compartir": 3.0,
+        "calificacion": 1.0 # Base, se sobrescribe si llega el peso
     }
     
-    peso = pesos.get(interaccion.tipo_interaccion, 1.0)
+    # Usar el peso enviado por el front, o el del diccionario por defecto
+    peso_final = interaccion.peso if interaccion.peso is not None else pesos.get(interaccion.tipo_interaccion, 1.0)
     
-    # Crear interacción
+    # Crear interacción (AHORA INCLUYE LA CALIFICACIÓN)
     nueva_interaccion = Interaccion(
         usuario_id=interaccion.usuario_id,
         vehiculo_id=interaccion.vehiculo_id,
         tipo_interaccion=interaccion.tipo_interaccion,
-        peso=peso,
+        peso=peso_final,
+        calificacion=interaccion.calificacion, # Guardamos las estrellitas
         fecha_interaccion=datetime.now()
     )
     
@@ -77,20 +77,20 @@ async def registrar_interaccion(
     db.commit()
     db.refresh(nueva_interaccion)
     
-    print(f"✅ Interacción: Usuario {interaccion.usuario_id} → Vehículo {interaccion.vehiculo_id} ({interaccion.tipo_interaccion})")
+    print(f"✅ Interacción: Usuario {interaccion.usuario_id} → Vehículo {interaccion.vehiculo_id} ({interaccion.tipo_interaccion} | Peso: {peso_final} | Estrellas: {interaccion.calificacion})")
     
     return {
         "message": "Interacción registrada exitosamente",
         "interaccion_id": nueva_interaccion.id,
         "tipo": interaccion.tipo_interaccion,
-        "peso": peso,
+        "peso": peso_final,
+        "calificacion": interaccion.calificacion,
         "vehiculo": {
             "id": vehiculo.id,
             "marca": vehiculo.marca,
             "modelo": vehiculo.modelo
         }
     }
-
 
 @router.get("/usuarios/{usuario_id}/interacciones")
 async def obtener_interacciones_usuario(
@@ -100,10 +100,7 @@ async def obtener_interacciones_usuario(
 ):
     """
     Obtener historial de interacciones de un usuario
-    
-    Útil para ver qué vehículos le han interesado.
     """
-    
     usuario = db.query(Usuario).filter(Usuario.id == usuario_id).first()
     if not usuario:
         raise HTTPException(status_code=404, detail=f"Usuario {usuario_id} no encontrado")
@@ -117,12 +114,12 @@ async def obtener_interacciones_usuario(
     resultado = []
     for interaccion in interacciones:
         vehiculo = db.query(Vehiculo).filter(Vehiculo.id == interaccion.vehiculo_id).first()
-        
         resultado.append({
             "id": interaccion.id,
             "vehiculo_id": interaccion.vehiculo_id,
             "tipo": interaccion.tipo_interaccion,
             "peso": interaccion.peso,
+            "calificacion": interaccion.calificacion, # NUEVO
             "fecha": interaccion.fecha_interaccion,
             "vehiculo": {
                 "marca": vehiculo.marca if vehiculo else None,
@@ -139,7 +136,6 @@ async def obtener_interacciones_usuario(
         "interacciones": resultado
     }
 
-
 @router.get("/vehiculos/{vehiculo_id}/interacciones")
 async def obtener_interacciones_vehiculo(
     vehiculo_id: int,
@@ -149,7 +145,6 @@ async def obtener_interacciones_vehiculo(
     """
     Ver qué usuarios han mostrado interés en este vehículo
     """
-    
     vehiculo = db.query(Vehiculo).filter(Vehiculo.id == vehiculo_id).first()
     if not vehiculo:
         raise HTTPException(status_code=404, detail=f"Vehículo {vehiculo_id} no encontrado")
@@ -175,6 +170,7 @@ async def obtener_interacciones_vehiculo(
                 "usuario_id": i.usuario_id,
                 "tipo": i.tipo_interaccion,
                 "peso": i.peso,
+                "calificacion": i.calificacion, # NUEVO
                 "fecha": i.fecha_interaccion
             }
             for i in interacciones

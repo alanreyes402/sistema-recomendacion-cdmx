@@ -8,7 +8,13 @@ class Usuario(Base):
     id = Column(Integer, primary_key=True, index=True)
     nombre = Column(String(100), nullable=False)
     email = Column(String(100), unique=True, nullable=False)
-    edad = Column(Integer, nullable=False)
+    
+    # NUEVO: Columna para la contraseña
+    password = Column(String(255), nullable=False) 
+    
+    # MODIFICADO: Quitamos el nullable=False porque ahora se llenará después en el Wizard
+    edad = Column(Integer, nullable=True) 
+    
     genero = Column(String(20))  # Masculino, Femenino, Otro
     
     # Preferencias y características

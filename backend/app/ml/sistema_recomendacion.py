@@ -173,13 +173,17 @@ class SistemaRecomendacionHibrido:
         if usuario.tipo_vehiculo_preferido and vehiculo.tipo_vehiculo == usuario.tipo_vehiculo_preferido:
             razones.append(f"{vehiculo.tipo_vehiculo} como buscas")
         
+        # --- CORRECCIÓN DE TEXTOS DE HOLOGRAMA ---
         if vehiculo.holograma == 'Exento':
             razones.append("EXENTO - Circula todos los dias")
         elif vehiculo.holograma in ['00', '0']:
-            razones.append("Holograma Verde - Circula todos los dias")
+            razones.append("Holograma 0 y 00 - Circula todos los días")
         elif vehiculo.holograma == '1':
-            razones.append("Holograma 1 - Buena circulacion")
-        
+            razones.append("Holograma 1 - Descansa 2 sábados al mes")
+        elif vehiculo.holograma == '2':
+            razones.append("Holograma 2 - Descansa todos los sábados")
+        # -----------------------------------------
+            
         if vehiculo.rendimiento_ciudad_kmL and vehiculo.rendimiento_ciudad_kmL > 15:
             razones.append(f"Excelente rendimiento ({vehiculo.rendimiento_ciudad_kmL} km/L)")
         

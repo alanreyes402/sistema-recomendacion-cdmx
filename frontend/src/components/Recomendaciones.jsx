@@ -1,13 +1,16 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Heart, Award } from 'lucide-react';
+import { MapPin, Heart } from 'lucide-react';
 import PropTypes from 'prop-types';
+import FichaTecnicaModal from './FichaTecnicaModal'; // Asegúrate de que este archivo exista en la misma carpeta
 
 const Recomendaciones = ({ usuarioId }) => {
   const [recomendaciones, setRecomendaciones] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [topN, setTopN] = useState(10);
+  
+  // Estado para controlar el modal de la ficha técnica
+  const [vehiculoSeleccionado, setVehiculoSeleccionado] = useState(null);
 
   useEffect(() => {
     const fetchRecomendaciones = async () => {
@@ -38,12 +41,10 @@ const Recomendaciones = ({ usuarioId }) => {
 
     if (usuarioId) {
       fetchRecomendaciones();
-    } else {
-      console.warn('⚠️ No hay usuarioId');
     }
   }, [usuarioId, topN]);
 
-  // Función para registrar interacción
+  // Función para registrar interacción en el backend
   const registrarInteraccion = async (vehiculoId, tipo) => {
     try {
       await fetch('http://localhost:8000/api/interacciones', {
@@ -61,22 +62,25 @@ const Recomendaciones = ({ usuarioId }) => {
     }
   };
 
+  // Abre el modal y registra el clic
   const handleVerDetalles = (vehiculo) => {
     registrarInteraccion(vehiculo.vehiculo_id, 'click');
-    alert(`Ver detalles de ${vehiculo.marca} ${vehiculo.modelo}`);
+    setVehiculoSeleccionado(vehiculo);
   };
 
-  const handleFavorito = (vehiculo) => {
+  // Registra el favorito sin abrir el modal
+  const handleFavorito = (e, vehiculo) => {
+    e.stopPropagation(); 
     registrarInteraccion(vehiculo.vehiculo_id, 'favorito');
-    alert(`❤️ ${vehiculo.marca} ${vehiculo.modelo} añadido a favoritos`);
+    alert(`❤️ ${vehiculo.marca} ${vehiculo.modelo} añadido a tus favoritos`);
   };
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-950 flex items-center justify-center p-8">
+      <div className="min-h-screen bg-white flex items-center justify-center p-8">
         <div className="text-center">
-          <div className="inline-block animate-spin rounded-full h-16 w-16 border-4 border-purple-500 border-t-transparent mb-4"></div>
-          <p className="text-xl text-slate-300">Cargando recomendaciones personalizadas...</p>
+          <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-blue-600 border-t-transparent mb-4"></div>
+          <p className="text-lg text-gray-500 font-medium">Calculando tus mejores opciones...</p>
         </div>
       </div>
     );
@@ -84,13 +88,13 @@ const Recomendaciones = ({ usuarioId }) => {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-950 flex items-center justify-center p-8">
-        <div className="bg-red-900/20 border-2 border-red-500 rounded-2xl p-8 max-w-md text-center">
-          <h3 className="text-2xl font-bold text-red-400 mb-4">❌ Error</h3>
-          <p className="text-slate-300 mb-6">{error}</p>
+      <div className="min-h-screen bg-white flex items-center justify-center p-8">
+        <div className="bg-red-50 border border-red-200 rounded-2xl p-8 max-w-md text-center">
+          <h3 className="text-xl font-bold text-red-600 mb-2">Error al cargar</h3>
+          <p className="text-gray-600 mb-6">{error}</p>
           <button 
             onClick={() => window.location.reload()}
-            className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 rounded-lg font-semibold text-white transition-all"
+            className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold text-white transition-colors"
           >
             Reintentar
           </button>
@@ -100,158 +104,110 @@ const Recomendaciones = ({ usuarioId }) => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-950 py-12 px-6">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="flex justify-between items-center mb-12 flex-wrap gap-4">
+    <div className="bg-white pb-12 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        
+        {/* Header estilo Catálogo */}
+        <div className="flex justify-between items-center mb-8 pb-4 border-b border-gray-100">
           <div>
-            <h2 className="text-4xl font-black text-slate-50 mb-2">
+            <h2 className="text-2xl font-bold text-gray-900">
               Recomendaciones Para Ti
             </h2>
-            <p className="text-slate-400">
-              {recomendaciones.length} vehículos perfectos para tu perfil
+            <p className="text-gray-500 text-sm mt-1">
+              Seleccionados especialmente para tu perfil
             </p>
           </div>
           
           <div className="flex items-center gap-2">
-            {/* CORRECCIÓN: label for + id */}
-            <label htmlFor="top-n-select" className="text-slate-300 font-semibold">
-              Mostrar:
-            </label>
             <select 
               id="top-n-select"
               value={topN} 
               onChange={(e) => setTopN(Number.parseInt(e.target.value, 10))}
-              className="px-4 py-2 bg-slate-800 border-2 border-slate-700 rounded-lg text-slate-50 font-semibold cursor-pointer hover:border-purple-500 transition-colors"
+              className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-gray-700 text-sm font-medium cursor-pointer hover:border-gray-300 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500/20"
             >
-              <option value={5}>5 vehículos</option>
-              <option value={10}>10 vehículos</option>
-              <option value={15}>15 vehículos</option>
-              <option value={20}>20 vehículos</option>
+              <option value={5}>Mejores 5</option>
+              <option value={10}>Mejores 10</option>
+              <option value={15}>Mejores 15</option>
+              <option value={20}>Mejores 20</option>
             </select>
           </div>
         </div>
 
-        {/* Grid de Recomendaciones */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {recomendaciones.map((rec, index) => (
-            <motion.div
-              key={rec.vehiculo_id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="relative bg-slate-800/40 backdrop-blur-xl border border-slate-700 rounded-2xl overflow-hidden hover:border-purple-500 transition-all duration-300 group"
-              onMouseEnter={() => registrarInteraccion(rec.vehiculo_id, 'vista')}
-            >
-              {/* Badge de ranking */}
-              <div className="absolute top-4 right-4 z-10 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-black text-lg w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
-                #{index + 1}
-              </div>
-
-              {/* Score bar */}
-              <div className="relative h-3 bg-slate-900">
-                <motion.div
-                  initial={{ width: 0 }}
-                  animate={{ width: `${rec.score * 100}%` }}
-                  transition={{ duration: 1, delay: index * 0.1 }}
-                  className="absolute h-full bg-gradient-to-r from-emerald-500 to-green-400"
-                />
-              </div>
-
-              {/* Contenido */}
-              <div className="p-6">
-                {/* Título */}
-                <h3 className="text-2xl font-bold text-slate-50 mb-1">
-                  {rec.marca} {rec.modelo}
-                </h3>
-                <p className="text-slate-400 mb-4">{rec.año}</p>
-
-                {/* Precio */}
-                <div className="mb-4">
-                  <p className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-                    ${rec.precio.toLocaleString('es-MX')}
-                  </p>
-                </div>
-
-                {/* Detalles */}
-                <div className="flex gap-2 mb-4 flex-wrap">
-                  <span className="px-3 py-1 bg-emerald-500/20 border border-emerald-500 rounded-full text-xs font-bold text-emerald-400 flex items-center gap-1">
-                    🍃 Holograma {rec.holograma}
-                  </span>
-                  <span className="px-3 py-1 bg-blue-500/20 border border-blue-500 rounded-full text-xs font-bold text-blue-400">
-                    {rec.tipo_vehiculo}
-                  </span>
-                </div>
-
-                {/* Score visual */}
-                <div className="bg-slate-900/50 rounded-lg p-3 mb-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-slate-400 text-sm font-semibold">Compatibilidad</span>
-                    <span className="text-emerald-400 text-lg font-black">
-                      {(rec.score * 100).toFixed(0)}%
-                    </span>
-                  </div>
-                  <div className="grid grid-cols-2 gap-2 text-xs">
-                    <div>
-                      <p className="text-slate-500">Tus preferencias</p>
-                      <p className="text-purple-400 font-bold">
-                        {(rec.score_usuario * 100).toFixed(0)}%
-                      </p>
-                    </div>
-                    <div>
-                      <p className="text-slate-500">Similitud</p>
-                      <p className="text-pink-400 font-bold">
-                        {(rec.score_knn * 100).toFixed(0)}%
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Razones */}
-                <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-3 mb-4">
-                  <p className="text-xs font-bold text-emerald-400 mb-1 flex items-center gap-1">
-                    <Award size={14} />
-                    ¿Por qué te lo recomendamos?
-                  </p>
-                  <p className="text-slate-300 text-sm leading-relaxed">
-                    {rec.razon}
-                  </p>
-                </div>
-
-                {/* Botones de acción */}
-                <div className="flex gap-2">
-                  <button
-                    onClick={() => handleVerDetalles(rec)}
-                    className="flex-1 px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 rounded-lg font-bold text-white transition-all transform hover:scale-105"
-                  >
-                    Ver Detalles
-                  </button>
-                  <button
-                    onClick={() => handleFavorito(rec)}
-                    className="px-4 py-3 bg-slate-700 hover:bg-red-500 border-2 border-slate-600 hover:border-red-500 rounded-lg transition-all transform hover:scale-105"
-                  >
-                    <Heart className="text-slate-300" size={20} />
-                  </button>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
         {/* Empty state */}
-        {recomendaciones.length === 0 && (
-          <div className="text-center py-20">
-            <p className="text-2xl text-slate-400">
-              No hay recomendaciones disponibles
+        {recomendaciones.length === 0 ? (
+          <div className="text-center py-20 bg-gray-50 rounded-2xl border border-dashed border-gray-200">
+            <p className="text-xl text-gray-500 font-medium">
+              Ajusta tus filtros en el test para encontrar más opciones.
             </p>
+          </div>
+        ) : (
+          /* Grid de Recomendaciones */
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {recomendaciones.map((rec) => (
+              <div
+                key={rec.vehiculo_id}
+                onClick={() => handleVerDetalles(rec)}
+                onMouseEnter={() => registrarInteraccion(rec.vehiculo_id, 'vista')}
+                className="bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer border border-gray-100 flex flex-col group"
+              >
+                {/* Mitad superior: Placeholder gris con badges */}
+                <div className="h-52 bg-gray-200 relative p-4 flex justify-between items-start">
+                  <span className="bg-white text-blue-700 text-xs font-black px-2 py-1 rounded shadow-sm uppercase tracking-wide">
+                    {rec.tipo_vehiculo || 'SEMINUEVO'}
+                  </span>
+                  <span className="bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded shadow-sm">
+                    {(rec.score * 100).toFixed(0)}% Match
+                  </span>
+                </div>
+
+                {/* Mitad inferior: Información */}
+                <div className="p-5 flex flex-col flex-grow">
+                  <h3 className="text-lg font-black text-gray-900 leading-tight mb-1">
+                    {rec.marca} {rec.modelo}
+                  </h3>
+                  <p className="text-gray-500 text-sm mb-6">Modelo {rec.año}</p>
+
+                  <div className="mt-auto">
+                    <p className="text-[10px] text-gray-400 font-bold uppercase tracking-wider mb-1">
+                      Precio de venta
+                    </p>
+                    <div className="flex justify-between items-end mb-4">
+                      <p className="text-xl font-black text-gray-900">
+                        ${rec.precio.toLocaleString('es-MX')} MXN
+                      </p>
+                      <button 
+                        onClick={(e) => handleFavorito(e, rec)}
+                        className="text-gray-300 hover:text-red-500 transition-colors opacity-0 group-hover:opacity-100"
+                      >
+                        <Heart size={20} />
+                      </button>
+                    </div>
+
+                    <div className="flex justify-between items-center border-t border-gray-50 pt-3">
+                      <MapPin size={18} className="text-gray-400" />
+                      <p className="text-xs text-blue-600 font-medium truncate max-w-[180px]" title={rec.razon}>
+                        {rec.razon.split('|')[0] || 'Sugerido para ti'}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         )}
       </div>
+
+      {/* Renderizado del Modal */}
+      {vehiculoSeleccionado && (
+        <FichaTecnicaModal 
+          vehiculo={vehiculoSeleccionado} 
+          onClose={() => setVehiculoSeleccionado(null)} 
+        />
+      )}
     </div>
   );
 };
 
-// CORRECCIÓN: Agregamos PropTypes
 Recomendaciones.propTypes = {
   usuarioId: PropTypes.number
 };
